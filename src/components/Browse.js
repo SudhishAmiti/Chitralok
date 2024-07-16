@@ -8,6 +8,7 @@ import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
 import { useSelector } from "react-redux";
 import GPTSearch from "./GPTSearch";
+import { Outlet } from "react-router-dom";
 const Browse = () => {
   const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   useNowPlayingMovies();
@@ -17,7 +18,8 @@ const Browse = () => {
 
   return (
     <div>
-      <Header />
+    <Header />
+    <Outlet/>
       {showGptSearch ? (
         <GPTSearch />
       ) : (
@@ -26,6 +28,7 @@ const Browse = () => {
           <SecondaryContainer />
         </>
       )}
+      
     </div>
   );
 };

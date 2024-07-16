@@ -9,6 +9,7 @@ const GPTSearch = () => {
     <div>
       <div className="absolute -z-10">
         <img
+        className='w-screen'
           src={BG_URL}
           alt="Netflix"
         />

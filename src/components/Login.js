@@ -84,6 +84,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
+        className="w-screen"
           src={BG_URL}
           alt="Netflix"
         />
@@ -115,9 +116,9 @@ const Login = () => {
           placeholder="Password"
           className="p-2 my-4 w-full rounded-md bg-gray-700"
         />
-        <p className="text-red-500">{errorMessage}</p>
+        <p className="text-purple-700">{errorMessage}</p>
         <button
-          className="bg-red-600 p-4 my-6 w-full rounded-md"
+          className="bg-purple-600 p-4 my-6 w-full rounded-md"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "SignIn" : "SignUp"}
@@ -125,7 +126,7 @@ const Login = () => {
         <button>
           <p className="py-4" onClick={toggleSignInForm}>
             {isSignInForm
-              ? "New to Netflix? Sign Up Now"
+              ? "New to Chitalok? Sign Up Now"
               : "Already a user? Sign In now"}
           </p>
         </button>

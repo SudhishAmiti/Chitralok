@@ -1,38 +1,28 @@
-import Login from "./Login"
-import Browse from "./Browse"
-import {createBrowserRouter,RouterProvider} from "react-router-dom";
-
-
-
+import Login from "./Login";
+import Browse from "./Browse";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import WatchPage from "./WatchPage";
 
 const Body = () => {
-    const browseRouter = createBrowserRouter([
-        {
-            path : "/",
-            element : <Login/>
-        },
-        {
-            path : "/browse",
-            element : <Browse/>
-        }
-    ]);
-
-    // useEffect(()=>{
-    //   onAuthStateChanged(auth, (user) => {
-    //     if (user) {
-    //       const {uid,email,displayName} = user;
-    //       dispatch(addUser({uid : uid, email : email, displayName : displayName}));
-    //     } else {
-    //       dispatch(removeUser);
-    //     }
-    //   });
-      
-    // },[])
+  const browseRouter = createBrowserRouter([
+    {
+      path: "/",
+      element: <Login />,
+    },
+    {
+      path: "/browse",
+      element: <Browse />,
+    },
+    {
+      path: "/watch/:id",
+      element: <WatchPage />,
+    },
+  ]);
   return (
     <div>
-      <RouterProvider router={browseRouter}/>
+      <RouterProvider router={browseRouter} />
     </div>
-  )
-}
+  );
+};
 
-export default Body
+export default Body;
